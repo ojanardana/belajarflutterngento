@@ -10,12 +10,7 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
-  final appScreen = [
-    const HomeScreen(),
-    const Text("Search Screen"),
-    const Text("Ticket Screen"),
-    const Text("Profile Screen"),
-  ];
+  final appScreen = [const HomeScreen(), const Text("Search Screen"), const Text("Ticket Screen"), const Text("Profile Screen")];
 
   int _selectedIndex = 0;
   void _onItemTapped(int index) {
@@ -27,7 +22,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Center(child: Text("My Tickets"))),
       body: Center(child: appScreen[_selectedIndex]),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
@@ -36,26 +30,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
         unselectedItemColor: Colors.grey,
         showSelectedLabels: false,
         items: [
-          BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
-            label: "Home",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_search_filled),
-            label: "Search",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular),
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_ticket_filled),
-            label: "Ticket",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_person_regular),
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_person_filled),
-            label: "Profile",
-          ),
+          BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_home_regular), activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_search_regular), activeIcon: Icon(FluentSystemIcons.ic_fluent_search_filled), label: "Search"),
+          BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular), activeIcon: Icon(FluentSystemIcons.ic_fluent_ticket_filled), label: "Ticket"),
+          BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_person_regular), activeIcon: Icon(FluentSystemIcons.ic_fluent_person_filled), label: "Profile"),
         ],
       ),
     );
