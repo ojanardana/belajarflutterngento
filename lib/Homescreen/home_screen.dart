@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:my_first_app/base/res/Styles/app_styles.dart';
 import 'package:my_first_app/base/res/media.dart';
 import 'package:my_first_app/base/widget/app_double_text.dart';
+import 'package:my_first_app/base/widget/ticket_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -69,11 +70,16 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ), // row
+                const SizedBox(height: 40),
+                const AppDoubleText(bigtext: 'Upcoming Flights', smalltexz: 'View all'),
+                TicketView(),
+
+                // const SizedBox(height: 40),
+                // const AppDoubleText(bigtext: 'Upcoming Flights', smalltexz: 'View all'),
+                // reuse able ke bawah karena kan jatohnya row
               ],
             ), // column
           ), // container
-          const SizedBox(height: 40),
-          const AppDoubleText(bigtext: 'Upcoming Flights', smalltext: 'View all'),
         ],
       ), // listview
     ); // scaffold
