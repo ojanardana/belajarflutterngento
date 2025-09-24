@@ -25,6 +25,7 @@ class TicketView extends StatelessWidget {
         ),
         child: Column(
           children: [
+            // show departure
             Row(
               children: [
                 Text(
